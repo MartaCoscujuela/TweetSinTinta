@@ -1,0 +1,527 @@
+@import url("fonts/HelveticaNeue/stylesheet.css");
+@import url("fonts/stylesheet.css");
+
+/* GENERAL */
+
+*,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(4, 4, 17);
+    background: -moz-linear-gradient(16deg, rgba(226, 226, 227, 1) 0%, rgba(252, 252, 252, 1) 48%, rgba(226, 226, 227, 1) 100%);
+    background: -webkit-linear-gradient(16deg, rgba(226, 226, 227, 1) 0%, rgba(252, 252, 252, 1) 48%, rgba(226, 226, 227, 1) 100%);
+    background: linear-gradient(16deg, rgba(226, 226, 227, 1) 0%, rgba(252, 252, 252, 1) 48%, rgba(226, 226, 227, 1) 100%);
+    background-image: url(img/home.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    padding: 0 2em;
+}
+
+#top,
+#loading {
+    min-height: calc(100vh - 80px);
+    width: 100%;
+}
+
+#loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#loading img {
+    width: 435px;
+    max-width: 100%;
+}
+
+.displaynone {
+    display: none;
+}
+
+.container {
+    text-align: center;
+    padding-top: 3em;
+}
+
+section {
+    max-width: 700px;
+    margin: auto;
+}
+
+.info {
+    max-width: 450px;
+    margin: auto;
+}
+
+.info p {
+    font-size: 16px;
+    text-align: left;
+    margin: 16px 0;
+}
+
+.info p .hand {
+    font-family: 'Arsenale White';
+    font-size: 35px;
+    line-height: 16px;
+}
+
+.tw_btn img {
+    height: 75px;
+    width: auto;
+    transition: all .2s ease-in-out;
+    margin: 3em auto;
+}
+
+.tw_btn:active img {
+    transform: scale(1.01);
+}
+
+
+/*MENU*/
+
+#menu {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    top: 2em;
+}
+
+#menu li,
+#burger li {
+    list-style: none;
+    font-size: 18px;
+    padding-bottom: 3px;
+}
+
+#burger {
+    color: #ddd;
+    display: none;
+}
+
+#menu li {
+    transition: all 300;
+}
+
+#menu li.selected {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url("img/sub.png");
+    background-size: contain;
+    transition: all 300;
+}
+
+
+/*HOME*/
+
+#main-logo {
+    width: 50px;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Arsenale White';
+    font-size: 3em;
+    font-size: 100px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: 'HelveticaNeueRegular';
+    margin: auto;
+    display: block;
+    margin-top: -1.5em;
+    margin-bottom: 3em;
+}
+
+#singin {
+    cursor: pointer;
+    height: 65px;
+    width: auto;
+    display: inline-block;
+    margin: 2em auto;
+}
+
+
+/* TWITTER BOX */
+
+.twitterbox {
+    background-color: white;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+}
+
+.twitterbox.bigtweet {
+    width: 450px;
+    height: 123px;
+    margin: auto;
+    border-radius: 0.3em;
+    padding-left: 18px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 4em;
+}
+
+.twitterbox.smalltweet {
+    width: 340px;
+    min-height: 93px;
+    border-radius: 0.175em;
+    padding-left: 13.5px;
+    padding-right: 7.5px;
+    padding-top: 7.5px;
+    margin-top: 1em;
+}
+
+.twitterbox #twitter-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.twitterbox #twitter-header .left {
+    display: flex;
+}
+
+.twitterbox.bigtweet #twitter-header .left {
+    height: 50px;
+    width: 200px;
+}
+
+.twitterbox.smalltweet #twitter-header .left {
+    height: 37.5px;
+    width: 150px;
+}
+
+.twitterbox.bigtweet #twitter-header .right {
+    width: 25px;
+    height: 21px;
+    margin-top: 5px;
+}
+
+.twitterbox.smalltweet #twitter-header .right {
+    width: 18.75px;
+    height: 15.75px;
+    margin-top: 3.75px;
+}
+
+.twitterbox #twitter-header .left #th-foto {
+    background-color: green;
+}
+
+.twitterbox.bigtweet #twitter-header .left #th-foto {
+    width: 45px;
+    height: 45px;
+    border-radius: 10em;
+}
+
+.twitterbox.smalltweet #twitter-header .left #th-foto {
+    width: 33.75px;
+    height: 33.75px;
+    border-radius: 7.5em;
+}
+
+.twitterbox #twitter-header .left #th-user {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.twitterbox #twitter-header .left #th-user #th-name {
+    font-weight: bold;
+}
+
+.twitterbox.bigtweet #twitter-header .left #th-user #th-name {
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+.twitterbox.smalltweet #twitter-header .left #th-user #th-name {
+    font-size: 9px;
+    margin-left: 2.25px;
+}
+
+.twitterbox #twitter-header .left #th-user #th-arroba {
+    color: #616e7d;
+}
+
+.twitterbox.bigtweet #twitter-header .left #th-user #th-arroba {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.twitterbox.smalltweet #twitter-header .left #th-user #th-arroba {
+    font-size: 7.5px;
+    margin-left: 2.25px;
+}
+
+.twitterbox.master textarea {
+    width: 100%;
+    border: 1 solid #616e7d;
+    resize: none;
+    padding: 0.25em;
+}
+
+.twitterbox.bigtweet textarea {
+    height: 48px;
+}
+
+.twitterbox.smalltweet textarea {
+    height: 40px;
+    font-size: 10px;
+}
+
+.twitterbox.master textarea:focus {
+    border: 1 solid #616e7d;
+}
+
+.twitterbox.smalltweet .tweettxt {
+    margin-bottom: 7.5px;
+    font-size: 10px;
+}
+
+#btn-publica {
+    cursor: pointer;
+}
+
+#btn-publica img {
+    margin-bottom: 2em;
+}
+
+
+/* CONTADOR */
+
+#changetext {
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 15px 0 45px 0;
+}
+
+#contador {
+    display: flex;
+    justify-content: start;
+    font-family: "HelveticaNeueBlack";
+    font-size: 2.2em;
+}
+
+#number {
+    color: #00a3f5;
+    margin-right: 0.2em;
+}
+
+
+/* TWEETS RECIENTES */
+
+h3 {
+    font-family: 'Arsenale White';
+    font-size: 3em;
+    text-align: left;
+}
+
+.hashtag {
+    color: #00a3f5;
+}
+
+.tweettxt {
+    text-align: left;
+}
+
+#grid-tweets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#load-more {
+    font-size: 5em;
+    color: white;
+    line-height: 100px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 2em;
+}
+
+footer #logo-caixa {
+    margin-top: 10px;
+    height: 50px;
+    width: auto;
+}
+
+footer #logo-twitter {
+    margin-top: 20px;
+    height: 20px;
+    width: auto;
+}
+
+@media (min-width: 1400px) {
+    .info {
+        max-width: 600px;
+    }
+    .info p {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 117px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    #contador {
+        font-size: 30px;
+    }
+    .bigger {
+        transform: scale(1.2);
+        margin: 2em auto;
+    }
+    .twitterbox.master {
+        transform: scale(1.2);
+        margin-top: 4em;
+    }
+    #singin {
+        height: 75px;
+        margin: 3em auto;
+    }
+}
+
+@media (min-width: 1700px) {
+    .info {
+        max-width: 700px;
+    }
+    .info p {
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 137px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    h3 {
+        margin-top: 2em;
+    }
+    #contador {
+        font-size: 33px;
+    }
+    .bigger {
+        transform: scale(1.5);
+        margin: 3em auto;
+    }
+    .twitterbox.master {
+        transform: scale(1.5);
+        margin-top: 5em;
+    }
+    #singin {
+        height: 80px;
+        margin: 3em auto;
+    }
+    .tw_btn img {
+        height: 85px;
+    }
+}
+
+@media (max-width: 960px) {
+    #menu {
+        position: absolute;
+    }
+}
+
+@media (max-width: 795px) {
+    #top,
+    #loading {
+        min-height: calc(100vh - 175px);
+    }
+    #grid-tweets {
+        flex-direction: column;
+    }
+    .twitterbox.recent {
+        margin-top: 7.5px;
+    }
+    .twitterbox {
+        margin: auto;
+    }
+    #contador {
+        font-size: 1.7em;
+    }
+    #menu {
+        display: none;
+    }
+    body {
+        padding: 0;
+        padding-top: 3em;
+    }
+    #burger {
+        display: flex;
+    }
+    h1 {
+        font-size: 75px;
+    }
+    h2 {
+        font-size: 17px;
+    }
+    h3 {
+        font-size: 2.5em;
+    }
+    #loading img {
+        width: 435px;
+        max-width: 70%;
+    }
+}
+
+@media(max-width:530px) {
+    #loading img {
+        width: 435px;
+        max-width: 100%;
+    }
+    .info p {
+        font-size: 14px;
+        text-align: left;
+        margin: 14px 0;
+    }
+    .info p .hand {
+        font-size: 27px;
+        line-height: 14px;
+    }
+    #contador {
+        font-size: 1.5em;
+    }
+    .tw_btn img {
+        height: 50px;
+        width: auto;
+        margin: 1.5em auto;
+    }
+}
+
+@media(max-width:530px) {
+    #contador {
+        font-size: 1.2em;
+    }
+    .twitterbox.smalltweet {
+        width: 100%;
+    }
+}
+
+@media(max-width:370px) {
+    #contador {
+        font-size: 1em;
+    }
+    h3 {}
+}

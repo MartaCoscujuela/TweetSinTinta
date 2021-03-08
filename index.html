@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tweets sin tinta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="top">
+        <div id="loading">
+
+            <img src="img/loading.png" />
+        </div>
+        <div id="hide" class="displaynone">
+            <nav id="burger" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li id="btn-home-sm" class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li id="btn-part-sm" class="nav-item">
+                            <a class="nav-link" href="#">Participa</a>
+                        </li>
+                        <li id="btn-pro-sm" class="nav-item">
+                            <a class="nav-link" href="#">Proyecto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <ul id="menu">
+                <li id="btn-home" class="btn-menu selected">Home</li>
+                <li id="btn-part" class="btn-menu">Participar</li>
+                <li id="btn-pro" class="btn-menu">El Proyecto</li>
+            </ul>
+            <div class="container">
+                <section id="home">
+                    <!-- Content here -->
+                    <img id="main-logo" src="img/logo.png" />
+                    <h1>#Tweetsintinta</h1>
+                    <h2>Quítale la tinta a tus tweets para</br>dársela a los que se han quedado sin ella.</h2>
+
+                    <div class="info">
+                        <p>En España <strong>1 de cada 3 niños</strong> viven en riesgo de pobreza infantil, entre otras muchas carencias, estos niños no pueden hacer frente a imprevistos como reponer material escolar.</p>
+                        <p><strong>¿Te imaginas quedarte <span class="hand">sin tinta</span> en tu bolígrafo y no poder comprarte otro?</strong></p>
+
+                        <a id="btn-escribe" class="tw_btn" href="#"><img src="img/btn_escribe.png" onmouseover="this.src='img/btn_escribe_hvr.png'" onmouseout="this.src='img/btn_escribe.png'" alt="" /></a>
+                </section>
+                <section id="part">
+                    <div class="info">
+                        <p>Desde <strong>CaixaProInfancia</strong> queremos concienciar sobre este problema y ayudar a los niños que viven en esta situación. <br> Y queremos que tú formes parte de ello.</p>
+                        <p><strong>Así que por cada tweet sin tinta que publiques, donaremos un pack de material escolar a uno de estos niños.</strong></p>
+                        <img id="singin" class="no-logged" src="img/singin.png" />
+                        <div class="twitterbox master bigtweet only-logged">
+                            <div id="twitter-header">
+                                <div class="left">
+                                    <img id="th-foto"></img>
+                                    <div id="th-user">
+                                        <div id="th-name">Ademas</div>
+                                        <div id="th-arroba">@ademas13</div>
+                                    </div>
+                                </div>
+                                <img class="right" src="img/twicon.jpg" alt="">
+
+                            </div>
+                            <textarea id="tweettext" maxlength="166"></textarea>
+                        </div>
+                        <div id="btn-publica" class="tw_btn only-logged"><img src="img/btn_publicar.png" onmouseover="this.src='img/btn_publicar_btn.png'" onmouseout="this.src='img/btn_publicar.png'" alt="" /></div>
+                    </div>
+                </section>
+                <section id="pro" class="bigger">
+                    <div id="contador">
+                        <div id="number">
+                            20.580
+                        </div>
+                        <div id="change-text"> tweets sin tinta</div>
+                    </div>
+                </section>
+                <section class="bigger">
+                    <h3>tweets recientes</h3>
+                    <div id="grid-tweets">
+                    </div>
+
+                    <div id="load-more">
+                        ...
+                    </div>
+                </section>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img id="logo-caixa" src="img/caixa.png"></img>
+            <img id="logo-twitter" src="img/logo_twitter.png" />
+        </footer>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">¡Gracias!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        Tu tweet se ha publicado sin tinta
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="main.js"></script>
+
+</body>
+
+</html>

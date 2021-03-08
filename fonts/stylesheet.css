@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Arsenale White';
+    src: url('ArsenaleWhite.woff2') format('woff2'),
+        url('ArsenaleWhite.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
